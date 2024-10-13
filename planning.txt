@@ -1,0 +1,50 @@
+******* Fitness Tracker App *******
+What?
+A Fitness Tracking App that will take user detail, calculate metrics, and to give personalized suggestions on calories intake and track workouts and food.
+
+*************************************************************************************************
+Functionalitites:
+1. User Sign up/Sign in/Sign out.
+2. Users can see their profiles.
+3. Users can update their credentials.
+4. Users will input their personal details(Name, Age, Gender, Height, Weight, Activity Level).
+5. Users will then input their Fitness Goals(Goal Type, Target Weight, Target Timeline).
+6. Users will then enter their Dietary Preferences and Restrictions(Diet Type, Food Allergies or restrictions)
+7. Users can update their personal details, fitness goals, dietary preferences and restrictions.
+8. User will see a dashboard of Daily calories goal, Progress bar for calories intake, workout summary.
+9. User can enter in food section and enter the food the food they eaten by searching in the list.
+10. User can enter in workout section and enter pre-defined workouts(running, cardio, weightlifting) with time and sets.
+11. Optional Notifications.
+
+*************************************************************************************************
+Routes:
+1. User's Authentication (JWT will be used):
+    /auth/signup: POST - Create new user in DB.
+    /auth/signin: POST - Log in an existing user.
+    /auth/signout: Click - Delete User's token from local storage.
+2. User's Details (JWT will be used):
+    /user/personal-info: POST - Enter user's personal information in the DB.
+    /user/fitness-goals: POST - Enter user's fitness goals in the DB.
+    /user/diet: POST - Enter user's dietary preferences and restrictions in the DB.
+3. User's Profile (JWT will be used):
+    /profile: GET - Get user's profile data.
+    /profile/update/email: PUT - Update user's email
+    /profile/update/password: PUT - Update user's password
+    /profile/update/personal-info: PUT - Update user's personal information.
+    /profile/update/fitness-goals: PUT - Update fitness goals.
+    /profile/update/diet: PUT - Update dietary preferences and restrictions.
+4. User's Progress (JWT will be used):
+    /progress/dashboard: GET - Get daily calories goal, progress bar for calories intake, workout summary.
+    /progress/current-calories: GET - Get current calorie intake.
+    /progress/add/food: POST - Add food entities to track calorie intake.
+    /progress/add/workout: POST - Log workout activities to adjust calorie expenditure.
+5. APIs (JWT will be used):
+    /api/food-list: GET - Get the food items list.
+    /api/workout-list: GET - Get the workout list.
+
+*************************************************************************************************
+Models:
+1. User
+
+*************************************************************************************************
+Api will be used for fetching food items list and workout list.
